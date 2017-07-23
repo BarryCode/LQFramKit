@@ -12,10 +12,10 @@ CRuler::CRuler(QWidget *parent) :
 {
     m_orn = (Qt::Orientation)-1;
     HDC hdc = GetDC(0);
-    m_widthmm = GetDeviceCaps(hdc, HORZSIZE);
-    m_heightmm = GetDeviceCaps(hdc, VERTSIZE);
-    m_width = GetDeviceCaps(hdc, HORZRES);
-    m_height = GetDeviceCaps(hdc, VERTRES);
+//    m_widthmm = GetDeviceCaps(hdc, HORZSIZE);
+//    m_heightmm = GetDeviceCaps(hdc, VERTSIZE);
+//    m_width = GetDeviceCaps(hdc, HORZRES);
+//    m_height = GetDeviceCaps(hdc, VERTRES);
     m_pixmm = m_width * 1.0 / m_widthmm;
 
     QFont f = qApp->font();

@@ -20,6 +20,8 @@ public:
     int getWidth() const;
     int getHeight() const;
     
+    bool isSmoothTransformationEnabled;
+
     unsigned char getPixel(int x, int y) const;
     unsigned char* copyMatrix() const;
     
@@ -29,7 +31,11 @@ public:
     // Callers take ownership of the returned memory and must call delete [] on it themselves.
     ArrayRef<char> getRow(int y, ArrayRef<char> row) const;
     ArrayRef<char> getMatrix() const;
-  
+
+    bool setImage(QString fileName, int maxWidth, int maxHeight);
+    bool setImage(QImage newImage, int maxWidth, int maxHeight);
+    void scale(int maxWidth, int maxHeight);
+    QImage scale_s(const QImage &image, int maxWidth, int maxHeight, bool smoothTransformation);
 private:
     QImage image;
     unsigned char* pRow;

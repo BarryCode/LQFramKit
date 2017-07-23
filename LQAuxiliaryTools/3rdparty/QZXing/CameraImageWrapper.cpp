@@ -69,35 +69,35 @@ unsigned char* CameraImageWrapper::copyMatrix() const
     return newMatrix;
 }
 
-//bool CameraImageWrapper::setImage(QString fileName, int maxWidth, int maxHeight)
-//{
-//    bool isLoaded = image.load(fileName);
+bool CameraImageWrapper::setImage(QString fileName, int maxWidth, int maxHeight)
+{
+    bool isLoaded = image.load(fileName);
 
-//    if(!isLoaded)
-//        return false;
+    if(!isLoaded)
+        return false;
 
-//    width = image.width();
-//    height = image.height();
+    width = image.width();
+    height = image.height();
 
-//    scale(maxWidth, maxHeight);
+    scale(maxWidth, maxHeight);
 
-//    return true;
-//}
+    return true;
+}
 
-//bool CameraImageWrapper::setImage(QImage newImage, int maxWidth, int maxHeight)
-//{
-//    if(newImage.isNull())
-//        return false;
+bool CameraImageWrapper::setImage(QImage newImage, int maxWidth, int maxHeight)
+{
+    if(newImage.isNull())
+        return false;
 
-//    image = newImage.copy();
+    image = newImage.copy();
 
-//    width = image.width();
-//    height = image.height();
+    width = image.width();
+    height = image.height();
 
-//    scale(maxWidth, maxHeight);
+    scale(maxWidth, maxHeight);
 
-//    return true;
-//}
+    return true;
+}
 
 QImage CameraImageWrapper::grayScaleImage(QImage::Format f)
 {
@@ -144,7 +144,7 @@ ArrayRef<char> CameraImageWrapper::getMatrix() const
         ArrayRef<char> tmpRow;
         tmpRow = getRow(y, ArrayRef<char>(width));
 #if __cplusplus > 199711L
-        memcpy(m, tmpRow->values()..data(), width);
+        memcpy(m, tmpRow->values().data(), width);
 #else
 		memcpy(m, &tmpRow->values()[0], width);
 #endif
@@ -163,23 +163,23 @@ ArrayRef<char> CameraImageWrapper::getMatrix() const
     return arr;
 }
 
-//void CameraImageWrapper::scale(int maxWidth, int maxHeight)
-//{
-//    image = scale_s(image, maxWidth, maxHeight, isSmoothTransformationEnabled);
-//}
+void CameraImageWrapper::scale(int maxWidth, int maxHeight)
+{
+    image = scale_s(image, maxWidth, maxHeight, isSmoothTransformationEnabled);
+}
 
-//QImage CameraImageWrapper::scale_s(const QImage &image, int maxWidth, int maxHeight, bool smoothTransformation)
-//{
-//    QImage transformedImage;
+QImage CameraImageWrapper::scale_s(const QImage &image, int maxWidth, int maxHeight, bool smoothTransformation)
+{
+    QImage transformedImage;
 
-//    if((maxWidth != 1 || maxHeight != 1) && (image.width() > maxWidth || image.height() > maxHeight))
-//        transformedImage = image.scaled(
-//                    maxWidth != -1 ? maxWidth : image.width(),
-//                    maxHeight != -1 ? maxHeight : image.height(),
-//                    Qt::KeepAspectRatio,
-//                    smoothTransformation ? Qt::SmoothTransformation : Qt::FastTransformation);
-//    else
-//        transformedImage = image;
+    if((maxWidth != 1 || maxHeight != 1) && (image.width() > maxWidth || image.height() > maxHeight))
+        transformedImage = image.scaled(
+                    maxWidth != -1 ? maxWidth : image.width(),
+                    maxHeight != -1 ? maxHeight : image.height(),
+                    Qt::KeepAspectRatio,
+                    smoothTransformation ? Qt::SmoothTransformation : Qt::FastTransformation);
+    else
+        transformedImage = image;
 
-//    return transformedImage;
-//}
+    return transformedImage;
+}
