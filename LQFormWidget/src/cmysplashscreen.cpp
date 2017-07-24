@@ -46,7 +46,7 @@ void CMySplashScreen::setProgress()
 
 void CMySplashScreen::slotUpdateProgress()
 {
-    static int num = 0;
+
     ProgressBar->setValue(numbersList[num]);
     num++;
 }
@@ -62,5 +62,6 @@ void CMySplashScreen::generateAscendRandomNumber()
     }
     //递增排序
     qSort(numbersList.begin(),numbersList.end());
+    num = 0;
 }
 

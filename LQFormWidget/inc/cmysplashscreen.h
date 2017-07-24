@@ -32,7 +32,8 @@ private:
      QList<int> numbersList;
      //启动界面停留的时间
      int elapseTime;
-
+     //更新进度条的索引
+      int num ;
 private:
      /*************************************************
        Function:setProgress
