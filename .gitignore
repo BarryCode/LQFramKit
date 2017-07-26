@@ -8,4 +8,4 @@ build_/*
 *.o
 *moc_*.cpp
 *ui_*.h
-
+*.sisc

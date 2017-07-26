@@ -5,6 +5,7 @@ SUBDIRS += \
     LQFormWidget \
     LQChart \
     LQAuxiliaryTools    \
+    NBaseUiKit      \
     Exmaple
 
 CONFIG  +=ordered

@@ -427,6 +427,13 @@
             </widget>
            </item>
            <item>
+            <widget class="QPushButton" name="pushButton_27">
+             <property name="text">
+              <string>NBaswUi接口</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <spacer name="horizontalSpacer_7">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>

@@ -31,7 +31,7 @@
 #include "demo_msgnotify.h"             //消息弹窗提醒
 #include "demo_navlistview.h"           //树状导航
 #include "demo_tabwidget.h"             //tab窗口
-
+#include "nbaseuikittest.h"             //NbaseUi控件实例
 /*辅助工具测试demo*/
 #include "demo_perfmon.h"               //性能监测
 #include "demo_imagebrowser.h"          //图片旋转缩放
@@ -336,4 +336,11 @@ void ExampleWidget::on_pushButton_26_clicked()
 
     QTimer::singleShot (10000,tab,SLOT(deleteLater()));
     ui->textEdit->append ("tab窗体已经运行，10秒后将关闭");
+}
+
+void ExampleWidget::on_pushButton_27_clicked()
+{
+    NBaseUiKitTest *test = new NBaseUiKitTest();
+    test->setWindowModality (Qt::WindowModal);
+    test->show();
 }

@@ -35,7 +35,8 @@ win32:{
     LIBS += -L../bin/ -lLQInstrumentation\
     -lLQFormWidget\
     -lLQAuxiliaryTools\
-    -lLQChart
+    -lLQChart \
+    -lNBaseUiKit
 }
 
 DEPENDPATH += ../bin
@@ -45,6 +46,10 @@ include(../LQInstrumentation/lqinstrumentation_inc.pri)
 include(../LQFormWidget/lqformwidget_inc.pri)
 include(../LQAuxiliaryTools/lqauxiliarytools_inc.pri)
 include(../LQChart/lqchart_inc.pri)
+include(../NBaseUiKit/NBaseUiKit_inc.pri)
+
+# 引入测试类库  此处比较重要 需要进一步查找问题
+#LIBS += -L$$OUT_PWD/../bin/ -lNBaseUiKit
 
 #import demo fle
 include($$PWD/demo/demo.pri)

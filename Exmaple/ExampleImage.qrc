@@ -3,5 +3,7 @@
         <file>image/start/Splashscreen.png</file>
         <file>image/message.png</file>
         <file>image/config/config.xml</file>
+        <file alias="miniImage">image/icon_sun.png</file>
+        <file alias="testImage">image/test.jpg</file>
     </qresource>
 </RCC>
