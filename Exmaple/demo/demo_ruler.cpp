@@ -22,8 +22,8 @@ void Demo_Ruler::init()
 {
     setWindowTitle (m_title);
     setWindowOpacity (1);
-    setWindowFlags (Qt::FramelessWindowHint);
-    setAttribute (Qt::WA_TranslucentBackground);
+//    setWindowFlags (Qt::FramelessWindowHint);
+//    setAttribute (Qt::WA_TranslucentBackground);
 
     ui->widget->setOrientation(Qt::Horizontal);
 
