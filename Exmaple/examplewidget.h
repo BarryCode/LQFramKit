@@ -1,4 +1,4 @@
-﻿#ifndef EXAMPLEWIDGET_H
+#ifndef EXAMPLEWIDGET_H
 #define EXAMPLEWIDGET_H
 
 #include <QWidget>
@@ -14,6 +14,9 @@ class ExampleWidget : public QWidget
 public:
     explicit ExampleWidget(QWidget *parent = 0);
     ~ExampleWidget();
+
+private Q_SLOTS:
+    void slotToleranceBarValue(const int &value);
 
 private slots:
     void slotTestSearchLineEdit(const QString &text);

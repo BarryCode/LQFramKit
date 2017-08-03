@@ -243,6 +243,7 @@ DISABLE_LIBRARY_FEATURES
 * V 0.0.1.5 添加树状导航及其demo；
 * V 0.0.1.6 添加tabWidget窗体;
 
+* V 0.0.1.7 添加了toleranceBar及其demo；
 
 # 基础UI组件使用说明
 

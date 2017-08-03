@@ -1,4 +1,4 @@
-﻿#include "examplewidget.h"
+#include "examplewidget.h"
 #include "ui_examplewidget.h"
 
 #include <QTimer>
@@ -31,6 +31,7 @@
 #include "demo_msgnotify.h"             //消息弹窗提醒
 #include "demo_navlistview.h"           //树状导航
 #include "demo_tabwidget.h"             //tab窗口
+#include "demo_tolerancebar.h"          //
 #include "nbaseuikittest.h"             //NbaseUi控件实例
 /*辅助工具测试demo*/
 #include "demo_perfmon.h"               //性能监测

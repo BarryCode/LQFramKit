@@ -23,7 +23,7 @@ FORMS += \
     $$PWD/demo_speedwatch.ui \
     $$PWD/demo_navlistview.ui \
     $$PWD/demo_tabwidget.ui \
-    $$PWD/nbaseuikittest.ui
+    $$PWD/demo_tolerancebar.ui
 
 HEADERS += \
     $$PWD/demo_qgauge.h \
@@ -50,7 +50,7 @@ HEADERS += \
     $$PWD/demo_speedwatch.h \
     $$PWD/demo_navlistview.h \
     $$PWD/demo_tabwidget.h \
-    $$PWD/nbaseuikittest.h
+    $$PWD/demo_tolerancebar.h
 
 SOURCES += \
     $$PWD/demo_qgauge.cpp \
@@ -77,4 +77,4 @@ SOURCES += \
     $$PWD/demo_speedwatch.cpp \
     $$PWD/demo_navlistview.cpp \
     $$PWD/demo_tabwidget.cpp \
-    $$PWD/nbaseuikittest.cpp
+    $$PWD/demo_tolerancebar.cpp
