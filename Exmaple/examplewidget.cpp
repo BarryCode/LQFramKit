@@ -52,6 +52,11 @@ ExampleWidget::~ExampleWidget()
     delete ui;
 }
 
+void ExampleWidget::slotToleranceBarValue(const int &value)
+{
+    ui->textEdit->append (QString::number (value));
+}
+
 void ExampleWidget::slotTestSearchLineEdit(const QString &text)
 {
     ui->textEdit->append("搜索的内容为:"+text+"\n");
@@ -339,6 +344,18 @@ void ExampleWidget::on_pushButton_26_clicked()
     ui->textEdit->append ("tab窗体已经运行，10秒后将关闭");
 }
 
+void ExampleWidget::on_pushButton_200_clicked()
+{
+    Demo_ToleranceBar *bar = new Demo_ToleranceBar("Tolerance Bar demo");
+    bar->setWindowModality (Qt::ApplicationModal);
+    bar->show ();
+
+    QTimer::singleShot (10000,bar,SLOT(deleteLater()));
+    ui->textEdit->append ("Tolerance Bar 已经运行，10秒后关闭");
+
+    connect (bar,SIGNAL(signalValueChange(int)),
+             this,SLOT(slotToleranceBarValue(int)));
+}
 void ExampleWidget::on_pushButton_27_clicked()
 {
     NBaseUiKitTest *test = new NBaseUiKitTest();
